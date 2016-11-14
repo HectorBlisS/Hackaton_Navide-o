@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="lol">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="/images/challenge_tier_league_of_legends_emblem_by_narishm-d6u3aij.png" type="image/png" sizes="16x16">
+    <title>Torneo League of Legends Pachuca</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body ng-controller="landingController as landing">
+
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Fixter</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li id="button_patrocinio"><a href="#!">¿Quieres patrocinar?</a></li>
+                    <li><a href="#">Info</a></li>
+                </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+            </nav>
+    </header>
+    <div class="opacity"></div>
+
+    <section class="count_container">
+        <ul id="countdown">
+            <li id="days">
+                <div class="number">00</div>
+                <div class="labell">Dias</div>
+            </li>
+            <li id="hours">
+                <div class="number">00</div>
+                <div class="labell">Horas</div>
+            </li>
+            <li id="minutes">
+                <div class="number">00</div>
+                <div class="labell">Minutos</div>
+            </li>
+            <li id="seconds">
+                <div class="number">00</div>
+                <div class="labell">Segundos</div>
+            </li>
+        </ul>
+        <div class="btn_conocemas row">
+            <button id="button" class="col-sm-offset-4 col-md-offset-5 col-md-2 col-sm-4 col-xs-offset-3 col-xs-6">Registrate</button>
+        </div>
+    </section>
+
+    <main class="main_info">
+        <section class="container">
+            <div class="row">
+                <div class="titulo col-md-12">
+                    <strong style="color:black">Organizadores</strong>
+                </div>
+                <article class="col-md-4 col-sm-4 col-xs-12">
+                    <figure class="logo_container">
+                        <img src="/images/14215219_10210432550187989_410312191_o.png" alt="logo fixter" class="img-responsive logo">
+                    </figure>
+                    <p class="description_empresa">
+                        Quienes viven esta cultura pueden aprovechar recursos que están de manera accesible a su alrededor (entre ellos la tecnología y el software) para solucionar problemas y para mejorar procesos de la vida cotidiana. Lo mejor de todo es eso, que para lograr todo esto no hace falta más que una computadora y considerable tiempo y esfuerzo invertidos en aprender a utilizar herramientas tecnológicas de la manera más eficiente posible.
+                    </p>
+                </article>
+                <article class="col-md-4 col-sm-4 col-xs-12">
+                    <figure class="logo_container">
+                        <img src="/images/14215219_10210432550187989_410312191_o.png" alt="logo fixter" class="img-responsive logo">
+                    </figure>
+                    <p class="description_empresa">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Voluptate eos, dignissimos, nam, vero magnam beatae voluptates
+                        laudantium doloribus eveniet quae quis deserunt doloremque culpa
+                        nobis ipsum atque dolor quibusdam eligendi.
+                    </p>
+                </article>
+                <article class="col-md-4 col-sm-4 col-xs-12">
+                    <figure class="logo_container">
+                        <img src="/images/LOGOTIPO CITNOVA FN.jpg" alt="logo fixter" class="img-responsive logo">
+                    </figure>
+                    <p class="description_empresa">
+                        Fomentar el desarrollo científico y tecnológico,
+                        aprovechando la investigación básica y aplicada de calidad,
+                        estimulando la vinculación academia-empresa- gobierno en las
+                        áreas estratégicas para el desarrollo,
+                        e impulsando la formación de recursos humanos 
+                        de alto nivel que coadyuven al bienestar social y a 
+                        la competitividad económica del Estado.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="info_evento">
+            <div class="opacity opacity_info"></div>
+            <article class="container">
+                <div class="row">
+                    <div class="titulo col-md-12">
+                        <strong>Información del Evento</strong>
+                    </div>
+                    <div class="col-md-6 col-xs-12">                
+                        <p class="data_container">
+                            <strong>Ubicación</strong>
+                            El evento se llevará a cabo en la instalaciones del parque científico y tecnológico del estado de hidalgo (CITNOVA)
+                            ubicado en Edificio Ciencia, Exhacienda de la Concepción 3, 42162 Hgo.
+                            <div id="map" class="col-md-12" style="height:50vh;margin-top:5%"></div>
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-xs-12 objetivo">
+                        <p class="data_container">
+                            <strong>Objetivo</strong>
+                            Generar en pachuca una comunidad activa y en constante crecimiento para compartir conocimiento y todo lo relacionado con el juego
+                        </p>
+
+                        <figure>
+                            <img src="/images/win.png" alt="" class="img-responsive">
+                        </figure>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="container contenedor_patrocinadores">
+            <article class="container">
+                <div class="row">
+                    <div class="titulo col-md-12">
+                        <strong style="color:black">Patrocinadores</strong>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="nosotros">
+            <div class="opacity opacity_info opacity_nosotros"></div>
+            <article class="container">
+                <div class="row">
+                    <div class="titulo col-md-12 titulo_nosotros">
+                        <strong>Detrás de esto...</strong>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <figure class="container_foto">
+                            <img src="/images/14702475_10210890145987598_6626587765068553280_n.jpg" alt="" class="img-responsive foto">
+                        </figure>
+                        <p>
+                            <strong>Héctor BlisS</strong>
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <figure class="container_foto">
+                            <img src="/images/12400806_1176077279087220_199699691252738255_n.jpg" alt="" class="img-responsive foto">
+                        </figure>
+                        <p>
+                            <strong>Kevin James</strong>
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <figure class="container_foto">
+                            <img src="/images/12227223_877633965665326_4250458589751884486_n.jpg" alt="" class="img-responsive foto">
+                        </figure>
+                        <p>
+                            <strong>Brenda Ortega</strong>
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <figure class="container_foto">
+                            <img src="/images/1376405_456867511095284_155381436_n.jpg" alt="" class="img-responsive foto">
+                        </figure>
+                        <p>
+                            <strong>David Zavala</strong>
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <figure class="container_foto">
+                            <img src="/images/10919035_408025659356754_1621638225402459403_n.jpg" alt="" class="img-responsive foto">
+                        </figure>
+                        <p>
+                            <strong>Saúl Sandoval</strong>
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <figure class="container_foto">
+                            <img src="/images/944336_1137985579546272_4165288849320648255_n.jpg" alt="" class="img-responsive foto">
+                        </figure>
+                        <p>
+                           <strong>Oswaldo Martinez</strong> 
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <figure class="container_foto">
+                            <img src="" alt="" class="img-responsive foto">
+                        </figure>
+                        <p>
+                            <strong></strong>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <div id="modal-overlay" class='modal-overlay'></div>
+    <div id="modal" class='modall'>
+      <div class='modal-content'>
+        <div class='modal-header'>
+            <i id="close" class="close material-icons">close</i>
+        </div>
+        <form class='form'  ng-show="!landing.mostrar" ng-submit="landing.enviar()">
+          <div class="row">
+              <div class="form-group col-md-12">
+                <label for="Nombre">Nombre</label>
+                <input type="text" class="form-control" id="Nombre" placeholder="Nombre" ng-model="landing.name" required>
+              </div>
+              <div class="form-group col-md-12">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Correo" ng-model="landing.email" required>
+              </div>
+              
+          </div>
+          <div class='form-submit'>
+            <input class='btn btn_datos' type="submit" value='Enviar' />
+          </div>
+        </form>
+
+        <div  id="succes" class="row" ng-show="landing.mostrar">
+            <div class="icon_succes">
+                <i class="fa fa-check-circle fa-5x" aria-hidden="true"></i>
+            </div>
+            <div class="Gracias col-md-12">
+                Gracias, lo antes posible nos comunicaremos contigo para contarte que sigue.
+            </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div id="modal-overlay" class='modal-overlay'></div>
+    <div id="modal_patrocinio" class='modall'>
+      <div class='modal-content'>
+        <div class='modal-header'>
+            <i id="close_dos" class="close material-icons">close</i>
+        </div>
+        <form class='form' id="form_empresa" ng-submit="landing.enviar_patrocinador()" ng-show="!landing.mostrar_patrocinador">
+          <div class="row">
+              <div class="form-group col-md-12">
+                <label for="Nombre">Nombre</label>
+                <input type="text" class="form-control" id="Nombre" placeholder="Nombre" ng-model="landing.name" required>
+              </div>
+              <div class="form-group col-md-12">
+                <label for="Empresa">Empresa</label>
+                <input type="text" class="form-control" id="Empresa" placeholder="Empresa" ng-model="landing.empresa" required>
+              </div>
+              <div class="form-group col-md-12">
+                <label for="Telefono">Teléfono</label>
+                <input type="number" class="form-control" id="Telefono" placeholder="Teléfono" ng-model="landing.telefono" required>
+              </div>
+              <div class="form-group col-md-12">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Correo" ng-model="landing.email" required>
+              </div>
+              
+          </div>
+          <div class='form-submit'>
+            <input class='btn btn_datos' type="submit" value='Enviar' />
+          </div>
+        </form>
+
+        <div  id="succes" class="row" ng-show="landing.mostrar_patrocinador">
+            <div class="icon_succes">
+                <i class="fa fa-check-circle fa-5x" aria-hidden="true"></i>
+            </div>
+            <div class="Gracias col-md-12">
+                Gracias, lo antes posible nos comunicaremos contigo para contarte que sigue.
+            </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+<!-- Jquery -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/jquery.easing/js/jquery.easing.js"></script>
+<!--Bootstrap-->
+<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBR166UPVG8dk4kQRn7dI9revtfAz8RqhM",
+    authDomain: "tests-4cafc.firebaseapp.com",
+    databaseURL: "https://tests-4cafc.firebaseio.com",
+    storageBucket: "tests-4cafc.appspot.com",
+    messagingSenderId: "701538060757"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script type="text/javascript">
+
+var map;
+function initMap() {
+  var myLatLng = {lat: 20.1342465, lng: -98.8016812};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'LoL'
+  });
+}
+
+    </script>
+
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="/app/app.js"></script>
+    <!-- Google Maps -->
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCApLfTHnODeHoMg2KIbr2jrxhDl4dPLGg&callback=initMap">
+    </script>
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/e9aac18955.js"></script>
+</body>
+</html>
