@@ -16,6 +16,23 @@ body {
   margin: 0;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
 
+
+.iconito{
+  padding-left:5%;
+  padding-top:5%;
+  max-height: 514.08px
+
+}
+.image{
+  width:70%;
+  margin-left:15%;
+  margin-bottom: 10%;
+  cursor:pointer;
+}
+.titulines{
+  font-family: 'Raleway', sans-serif;
+  text-align:center;
+}
 ul#countdown {
   position: relative;
   top: 50%;
@@ -45,9 +62,14 @@ ul#countdown {
 
 .opacity {
   width: 100%;
-  height: 100vh;
   background: rgba(0, 0, 0, 0.5);
-  position: absolute; }
+ background-size: cover; }
+
+.opacity2 {
+  width: 100%;
+height:100%;
+  background: rgba(0, 0, 0, 0.5);
+ background-size: cover; }
 
 .btn_conocemas {
   position: relative;
@@ -187,15 +209,13 @@ header .sticky {
   .navbar {
     border-radius: 0; } }
 .main_info section {
-  margin-bottom: 5%;
-  height: auto; }
+  margin-bottom: 5%;}
 .main_info .logo_container {
+  margin-top:15px;
   padding: 15%; }
-.main_info .description_empresa {
-  padding: 0 5%;
-  text-align: center; }
+
 .main_info .logo {
-  min-height: 242.25px;
+  min-height: auto;
   border-radius: 90%; }
 .main_info .titulo {
   text-align: center;
@@ -209,7 +229,7 @@ header .sticky {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+height:auto;
   color: white; }
   .main_info .info_evento .data_container {
     padding: 0 5%;
@@ -376,7 +396,7 @@ header .sticky {
 
 .titulo_nosotros {
   margin-bottom: 0 !important; }
-
+ 
 /*@media (max-width: 320px)
  * .opacity_nosotros
  *     height: 360vh !important
@@ -407,7 +427,7 @@ header .sticky {
   .main_info .description_empresa {
     padding: 10% 5%; }
   .main_info .info_evento {
-    height: 180vh; }
+    height: auto; }
     .main_info .info_evento .objetivo {
       margin-top: 10%; }
   .main_info .opacity_info {
@@ -430,6 +450,14 @@ header .sticky {
 
   .nosotros {
     height: 360vh !important; } }
+
+@media(min-width: 1024){
+  .copa img{
+    width:100px;
+  }
+}
+
+
 /*@media (max-width: 768px)
  * .main_info
  *     .logo_container
