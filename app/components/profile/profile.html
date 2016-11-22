@@ -26,70 +26,101 @@
 	</div>
 
 	<h2 ng-show="perfil">{{perfil.clan}}</h2>
+	<h3 ng-hide="todoClan.activo || !perfil" class="pendiente">
+		Clan No registrado. Pago pendiente
+		<br>
+		<a href="">Pagar</a>
+	</h3>
+	<h3 ng-show="todoClan.activo" class="activo">Clan Registrado. Pagado</h3>
 
 </div>
 </form>
 
-<div ng-show="perfil" class="miembros">
-	<div class="card card-1 row">
-		<div ng-show="perfil" class="siClan col-xs-8 col-xs-offset-1">
-			<input type="text" class="form-control" ng-model="clan.miembro2" bs-options="amigo as amigo.displayName for amigo in amigos" placeholder="Enter Amigo" bs-typeahead>
+<div ng-show="perfil && perfil.capitan" class="miembros">
 
-			<a ng-show="clan.miembro2.displayName" href="#" class="list-group-item active">
+	<div class="card card-1 row">
+	<form ng-submit="invitar(clan.miembro2)">
+		<div ng-show="perfil" class="siClan col-xs-8 col-xs-offset-1">
+			<input ng-hide="clan.miembro2.displayName" type="text" class="form-control" ng-model="clan.miembro2" bs-options="amigo as amigo.displayName for amigo in amigos" placeholder="Enter Amigo" bs-typeahead required>
+
+			<a ng-show="clan.miembro2.displayName && clan.miembro2.displayName !== user.displayName" href="#" class="list-group-item active">
 			   <img height="50px" class="redondo" src="{{clan.miembro2.photoURL}}">
 			   <h4>{{clan.miembro2.displayName}}</h4>
 			</a>
 
 			
 		</div>
-		<button ng-click="clearMiembro(2)" class="btn btn-danger col-xs-2">X</button>
+		<div id="botones" ng-show="clan.miembro2.displayName">
+		<button ng-click="clearMiembro(2)" class="btn btn-danger col-xs-1">X</button>
+		<input class="btn btn-success col-xs-2" type="submit" value="Enviar invitación">
+		</div>
+	</form>
 	</div>
 
 	<div class="card card-1 row">
+	<form ng-submit="invitar(clan.miembro3)">
 		<div ng-show="perfil" class="siClan col-xs-8 col-xs-offset-1">
-			<input type="text" class="form-control" ng-model="clan.miembro3" bs-options="amigo as amigo.displayName for amigo in amigos" placeholder="Enter Amigo" bs-typeahead ng-disabled="isDisabled">
+			<input ng-hide="clan.miembro3.displayName" type="text" class="form-control" ng-model="clan.miembro3" bs-options="amigo as amigo.displayName for amigo in amigos" placeholder="Enter Amigo" bs-typeahead required>
 
-
-			<a ng-show="clan.miembro3.displayName" href="#" class="list-group-item active">
+			<a ng-show="clan.miembro3.displayName && clan.miembro3.displayName !== user.displayName" href="#" class="list-group-item active">
 			   <img height="50px" class="redondo" src="{{clan.miembro3.photoURL}}">
 			   <h4>{{clan.miembro3.displayName}}</h4>
 			</a>
 
+			
 		</div>
-		<button ng-click="clearMiembro(3)" class="btn btn-danger col-xs-2">X</button>
+		<div id="botones" ng-show="clan.miembro2.displayName">
+		<button ng-click="clearMiembro(2)" class="btn btn-danger col-xs-1">X</button>
+		<input class="btn btn-success col-xs-2" type="submit" value="Enviar invitación">
+		</div>
+	</form>
 	</div>
 
 	<div class="card card-1 row">
+	<form ng-submit="invitar(clan.miembro4)">
 		<div ng-show="perfil" class="siClan col-xs-8 col-xs-offset-1">
-			<input type="text" class="form-control" ng-model="clan.miembro4" bs-options="amigo as amigo.displayName for amigo in amigos" placeholder="Enter Amigo" bs-typeahead>
+			<input ng-hide="clan.miembro4.displayName" type="text" class="form-control" ng-model="clan.miembro4" bs-options="amigo as amigo.displayName for amigo in amigos" placeholder="Enter Amigo" bs-typeahead required>
 
-
-			<a ng-show="clan.miembro4.displayName" href="#" class="list-group-item active">
+			<a ng-show="clan.miembro4.displayName && clan.miembro4.displayName !== user.displayName" href="#" class="list-group-item active">
 			   <img height="50px" class="redondo" src="{{clan.miembro4.photoURL}}">
 			   <h4>{{clan.miembro4.displayName}}</h4>
 			</a>
 
-
+			
 		</div>
-		<button ng-click="clearMiembro(4)" class="btn btn-danger col-xs-2">X</button>
+		<div id="botones" ng-show="clan.miembro2.displayName">
+		<button ng-click="clearMiembro(2)" class="btn btn-danger col-xs-1">X</button>
+		<input class="btn btn-success col-xs-2" type="submit" value="Enviar invitación">
+		</div>
+	</form>
 	</div>
 
 	<div class="card card-1 row">
+	<form ng-submit="invitar(clan.miembro5)">
 		<div ng-show="perfil" class="siClan col-xs-8 col-xs-offset-1">
-			<input type="text" class="form-control" ng-model="clan.miembro5" bs-options="amigo as amigo.displayName for amigo in amigos" placeholder="Enter Amigo" bs-typeahead>
+			<input ng-hide="clan.miembro5.displayName" type="text" class="form-control" ng-model="clan.miembro5" bs-options="amigo as amigo.displayName for amigo in amigos" placeholder="Enter Amigo" bs-typeahead required>
 
-
-			<a ng-show="clan.miembro5.displayName" href="#" class="list-group-item active">
+			<a ng-show="clan.miembro5.displayName && clan.miembro5.displayName !== user.displayName" href="#" class="list-group-item active">
 			   <img height="50px" class="redondo" src="{{clan.miembro5.photoURL}}">
 			   <h4>{{clan.miembro5.displayName}}</h4>
 			</a>
 
-
+			
 		</div>
-		<button ng-click="clearMiembro(5)" class="btn btn-danger col-xs-2">X</button>
+		<div id="botones" ng-show="clan.miembro2.displayName">
+		<button ng-click="clearMiembro(2)" class="btn btn-danger col-xs-1">X</button>
+		<input class="btn btn-success col-xs-2" type="submit" value="Enviar invitación">
+		</div>
+	</form>
 	</div>
-
 </div> <!-- miembros-->
+
+<div align="center" class="miembros" ng-hide="perfil.capitan">
+	<a ng-repeat="miembro in todoClan.miembros" href="" class="list-group-item active">
+		<img height="50px" class="redondo" src="{{miembro.photoURL}}">
+		<h4>{{miembro.displayName}}</h4>
+	</a>
+</div> <!--miembros si no capitan -->
 
 
 
@@ -98,6 +129,15 @@
 	<input placeholder="Escribe el nombre de un miembro" class="form-control" type="text">
 	</div>
 	<button class="btn btn-danger col-xs-2">Eliminar</button>
+</div>
+
+
+<!-- Invitaciones -->
+<div ng-show="inv.invitado_displayName === user.displayName" ng-repeat="inv in i" class="card card-1 row">
+	<h5>Tienes una invitacion para unirte al Clan:</h5>
+	<h4>{{inv.clan}}</h4>
+	<button ng-click="acepto(inv)" class="btn btn-success">Aceptar</button>
+	<button ng-click="noAcepto(inv)" class="btn btn-danger">Rechazar</button>
 </div>
 
 </div> <!-- 8 columnas -->
