@@ -140,7 +140,8 @@ height:100%;
 .modall.active,
 .modal-overlay.active {
   visibility: visible;
-  opacity: 1; }
+  opacity: 1;
+  z-index: 99; }
 
 .modall {
   background: #fff;
@@ -487,6 +488,7 @@ height:auto;
  *         height: 180vh */
 
 /*# sourceMappingURL=main.css.map */
+
 
 
 

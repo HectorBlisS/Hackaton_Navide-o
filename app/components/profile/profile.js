@@ -194,6 +194,20 @@
         	
         }
 
+
+
+$('#btn-pagar').click(function (){
+            $('#modal-overlay').addClass('active');
+            $('#modal_pagar').addClass('active');
+          });
+          $('#close').click(function(){
+            $('#modal-overlay').removeClass('active');
+            $('#modal_pagar').removeClass('active');
+          });
+
+
+
+
 	} //controller
 
 	angular
