@@ -1,0 +1,40 @@
+.elnav{
+	width: 100%;
+	height: 300px;
+	background-image: url('/images/fondis.png');
+  	background-size: cover;
+  	background-position: center;
+  	padding-top:10px;
+  	padding-left: 50px;
+  	color:white;
+}
+
+.elnav span{
+	margin-left: 50px;
+	font-size: 2rem;
+}
+
+@media (max-height: 600px){
+.elnav span{
+	font-size: 1rem;
+}
+}
+
+.elnav a{
+	color: white;
+}
+.papa{
+	position: relative;
+}
+.mini-menu{
+	position: absolute;
+	bottom:-50;
+	left: 0;
+	background-color: white;
+	list-style: none;
+	font-size: 1.5rem;
+	color: grey;
+	padding: 0;
+
+}
+

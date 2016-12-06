@@ -27,6 +27,34 @@
           });
         }
 
+        $scope.logIn = function(){
+          $scope.authObj.$signInWithPopup("facebook")
+          .then(function(result) {
+            $scope.user = result.user;
+            $location.path('/profile');
+            // console.log($scope.user)
+            // window.location.reload();
+
+            //Guardamos al usuario:
+            var usuarios = $firebaseArray(ref);
+            ref.child($scope.user.uid).update({
+              displayName:$scope.user.displayName,
+              email:$scope.user.email,
+              photoURL:$scope.user.photoURL,
+              uid:$scope.user.uid
+            })
+            .then(function(){
+              console.log('segun si');
+            });
+        
+        });
+        }
+
+        $scope.menusito = function(){
+          $('.mini-menu').slideToggle();
+          $.apply;
+        }
+
 	} //controller
 
 	angular

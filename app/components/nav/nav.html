@@ -1,30 +1,42 @@
     <header>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="https://www.fixter.camp/">Fixter</a>
-                </div>
+        <nav class="elnav">
+           
+           <div class="pull-left">
+                <img width="100" src="/images/geeki_navida.png">
+                <span>
+                    <a class="btn btn-info" href="">
+                    ¿Quieres Patrocinar?
+                    </a>
+                </span>
+                <span>
+                    <a class="btn btn-warning" href="">
+                    Bases del hackatón
+                    </a>
+                </span>
+                <span ng-hide="user">
+                    <button ng-click="logIn()" class="btn btn-danger">Iniciar Sesión</button>
+                </span>
+            </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li id="button_patrocinio"><a href="#!">¿Quieres patrocinar?</a></li>
-                    <li><a href="#">Info</a></li>
-                </ul>
-                <div class="pull-right" ng-show="user">
-                        <span>{{user.displayName}}</span>
-                        <a href="#/profile">
-                        <img width="50px" style="border-radius:50%" src="{{user.photoURL}}">
+                
+                
+                        <span class="pull-right">
+                        <a ng-click="menusito()" href>
+                            <div class="papa">
+                        <img id="papa" width="100" style="border-radius:50%" src="{{user.photoURL}}">
                         </a>
-                        <button ng-click="logOut()" class="btn btn-danger">Cerrar Sesión</button>
-                    </div>
+                            <ul class="mini-menu" style="display:none">
+                                <li>perfil</li>
+                                <li>Pollollon</li>
+                                <li>Cerrar sesión</li>
+                            </ul>
+                            </div>
+                        
+                        </span>
+                        
+                
+                
+            
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
             </nav>
