@@ -16,14 +16,14 @@
 			<p style='	margin-top:10px; font-family: 'Raleway', sans-serif;'>
 			¿Te animas? Escríbenos</p>
 			
-			<form class="form-horizontal">
+			<form class="form-horizontal" validate>
 			 <div class="row">
 			 	<div class="col-md-6">
 			 		<!--nombre-->
 				  <div class="form-group">
 				    <label for="inputPassword3" class="col-sm-2 control-label">Nombre*</label>
 				    <div class="col-sm-10">
-				      <input type="text" class="form-control" id="inputPassword3" placeholder="Nombre del patrocinador">
+				      <input required type="text" class="form-control" id="inputPassword3" placeholder="Nombre del patrocinador">
 				    </div>
 				  </div>
 			 	</div>
@@ -32,7 +32,7 @@
 				  <div class="form-group">
 				    <label for="inputPassword3" class="col-sm-2 control-label">Empresa*</label>
 				    <div class="col-sm-10">
-				      <input type="text" class="form-control" id="inputPassword3" placeholder="Nombre de la Empresa">
+				      <input required type="text" class="form-control" id="inputPassword3" placeholder="Nombre de la Empresa">
 				    </div>
 				  </div>
 			 	</div>
@@ -44,7 +44,7 @@
 				   <div class="form-group">
 				    <label for="inputEmail3" class="col-sm-2 control-label">Correo*</label>
 				    <div class="col-sm-10">
-				      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+				      <input required type="email" class="form-control" id="inputEmail3" placeholder="Email">
 				    </div>
 				  </div>
 			 	</div>
@@ -53,7 +53,7 @@
 				  <div class="form-group">
 				    <label for="inputP" class="col-sm-2 control-label">Número*</label>
 				    <div class="col-sm-10">
-				      <input type="number" class="form-control" id="inputP" placeholder="Número de contacto">
+				      <input required type="number" class="form-control" id="inputP" placeholder="Número de contacto">
 				    </div>
 				  </div>
 			 	</div>
@@ -62,7 +62,7 @@
 			  <div class="form-group">
 			    <label for="inputsaa" class="col-sm-1 control-label">Mensaje*</label>
 			    <div class="col-sm-10">
-			      <textarea class="form-control" rows="3" placeholder="Cúentanos"></textarea>
+			      <textarea required class="form-control" rows="3" placeholder="Cúentanos"></textarea>
 			    </div>
 			  </div>
 		  	<div class="form-group">
