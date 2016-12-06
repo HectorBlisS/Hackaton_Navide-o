@@ -5,7 +5,18 @@
 		controller:patrocinadorController
 	}
 
-	function patrocinadorController(){
+	function patrocinadorController($scope, $firebaseArray){
+
+		var ref = database().ref().child("patrocinadores");
+
+		$scope.pat = $firebaseArray(ref);
+
+		var nombre = $('#nombre').val();
+		var empresa = $('#empresa').val();
+		var correo = $('#correo').val();
+		var telefono = $('#telefono').val();
+		var texto = $('#texto').val();
+
 
 	}
 
