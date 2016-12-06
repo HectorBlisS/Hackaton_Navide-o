@@ -8,8 +8,7 @@ html, body, section, h1, div{
   padding: 0;
   color: black;
 }
-<<<<<<< HEAD
-=======
+
 #particles-js{
 	position: absolute;
 	top: 0;
@@ -19,6 +18,3 @@ html, body, section, h1, div{
 .arriba{
 	z-index: 999;
 }
-
-
->>>>>>> 935c13704f1de7c09e94f98347965d8b0d7029fb

@@ -6,13 +6,12 @@ body{
   margin: 0;
   padding: 0;
   text-align: center; /* Fix para Internet Explorer */
-  background-image: url('bg.png');
   background-position:center top;
 }
 
 #wrapper{
   margin: 0px auto 0px auto;
-  width: 900px;
+  width: 1000px;
   min-height: 100%;
   *height: 100%; /* Fix para IE */
   _height: 100%; /* Fix para IE6 */
