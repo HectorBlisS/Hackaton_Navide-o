@@ -1,6 +1,7 @@
 @import "_nav.css";
 @import "_landing.css";
 @import "_profile.css";
+@import "_patrocinador.css";
 
 html, body, section, h1, div{
   margin: 0;
