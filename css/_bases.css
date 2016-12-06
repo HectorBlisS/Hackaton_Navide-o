@@ -17,5 +17,6 @@ body{
   _height: 100%; /* Fix para IE6 */
   background-image: url('fondo.png');
   background-position: center top;
-  text-align: center;
+  text-align: justify;
+  font-family: 'Dosis', sans-serif;
 }
