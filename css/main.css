@@ -1,6 +1,7 @@
 @import "_nav.css";
 @import "_landing.css";
 @import "_profile.css";
+@import "_bases.css";
 
 @import "_patrocinador.css";
 
@@ -18,6 +19,7 @@ html, body, section, h1, div{
 body{
 	min-height: 100vh;
 }
+
 #particles-js{
 	position: absolute;
 	top: 64px;
@@ -27,6 +29,3 @@ body{
 .body{
 	position: relative;
 }
-
-
-
