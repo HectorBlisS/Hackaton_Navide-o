@@ -2,14 +2,16 @@
         <nav class="elnav">
            
            <div class="pull-left">
+            <a href="#/">
                 <img width="100" src="/images/geeki_navida.png">
+            </a>
                 <span>
                     <a class="btn btn-info" href="">
                     ¿Quieres Patrocinar?
                     </a>
                 </span>
                 <span>
-                    <a class="btn btn-warning" href="">
+                    <a class="btn btn-info" href="">
                     Bases del hackatón
                     </a>
                 </span>
@@ -20,15 +22,19 @@
 
                 
                 
-                        <span class="pull-right">
+                        <span ng-show="user" class="pull-right">
                         <a ng-click="menusito()" href>
-                            <div class="papa">
+                        <div class="papa">
                         <img id="papa" width="100" style="border-radius:50%" src="{{user.photoURL}}">
                         </a>
                             <ul class="mini-menu" style="display:none">
                                 <li>perfil</li>
                                 <li>Pollollon</li>
-                                <li>Cerrar sesión</li>
+                                <li ng-click="logOut()">
+                                    <a href>
+                                    Cerrar sesión
+                                    </a>
+                                </li>
                             </ul>
                             </div>
                         

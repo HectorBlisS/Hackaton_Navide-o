@@ -5,12 +5,5 @@
 
     // function initController($firebaseArray,$scope,$firebaseAuth,$location){
 
-
-
-
-
-
-
-
     // }
 })();
