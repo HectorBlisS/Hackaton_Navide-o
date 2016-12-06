@@ -3,18 +3,29 @@
 @import "_profile.css";
 @import "_bases.css";
 
+@import "_patrocinador.css";
+
+@import "_footer.css";
+@import "santa.css";
+
+
 html, body, section, h1, div{
   margin: 0;
   padding: 0;
   color: black;
+  font-family: 'Bree Serif', serif;
+
+}
+body{
+	min-height: 100vh;
 }
 
 #particles-js{
 	position: absolute;
-	top: 0;
+	top: 64px;
 	width: 100%;
-	z-index: 2;
+	z-index: 4;
 }
-.arriba{
-	z-index: 999;
+.body{
+	position: relative;
 }

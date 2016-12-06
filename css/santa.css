@@ -1,0 +1,48 @@
+@keyframes santa{
+	0%{
+		left:-200px;
+		top:800px;
+		transform: rotate(-5deg);
+	}
+	20%{
+		left:1500px;
+		top:100px;
+		transform: rotate(-20deg);
+	}
+	50%{
+		left:1501px;
+		top:100px;
+		transform: rotate(-20deg);
+		transform:rotateY(180deg);
+	}
+	60%{
+		left:-200px;
+		top:200px;
+		transform: rotate(0deg);
+		transform:rotateY(180deg);
+	}
+	62%{
+		left:-200px;
+		top:200px;
+		transform: rotate(0deg);
+		
+	}
+	80%{
+		left:1500px;
+		top:800px;
+		transform: rotate(10deg);
+	}
+	100%{
+		left:150000px;
+		top:100px;
+		transform: rotate(0deg);
+	}
+}
+
+#santa{
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 999;
+	animation:santa 10s ease-in infinite;
+}
