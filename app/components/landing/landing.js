@@ -8,7 +8,9 @@
 	}
 
 	function landingController($scope,$http,$firebaseAuth,$firebaseArray,$location){
-		
+		//particulas estorbosas
+    
+
 		 //Inicio de sesión BLISS
         $scope.authObj = $firebaseAuth();
         $scope.authObj.$onAuthStateChanged(function(firebaseUser) {

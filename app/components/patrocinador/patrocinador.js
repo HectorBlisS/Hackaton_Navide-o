@@ -6,6 +6,7 @@
 	}
 
 	function patrocinadorController(){
+		$("#particles-js").css("z-index", "none");
 
 	}
 
