@@ -5,7 +5,7 @@
 		controller:patrocinadorController
 	}
 
-	function (patrocinadorController){
+	function patrocinadorController(){
 
 	}
 
