@@ -5,18 +5,28 @@
 		controller:patrocinadorController
 	}
 
+
 	function patrocinadorController($scope, $firebaseArray){
 
-		var ref = database().ref().child("patrocinadores");
+		var ref = firebase.database().ref().child("patrocinadores");
 
 		$scope.pat = $firebaseArray(ref);
 
-		var nombre = $('#nombre').val();
-		var empresa = $('#empresa').val();
-		var correo = $('#correo').val();
-		var telefono = $('#telefono').val();
-		var texto = $('#texto').val();
+		
 
+		$scope.addMessage = function() {
+		    $scope.pat.$add({
+		    	name: $scope.nombre,
+		    	emp: $scope.empresa,
+		    	email: $scope.correo,
+		    	tel: $scope.telefono,
+		    	text: $scope.texto
+		    });
+		  };
+
+
+	
+		$("#particles-js").css("z-index", "none");
 
 	}
 
