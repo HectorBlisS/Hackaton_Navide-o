@@ -42,12 +42,17 @@
             .when('/patrocinador', {
                 template: `<patrocinador-component></patrocinador-component>`
             })
+            .when('/bases',{
+                template: `<bases-component></bases-component>`
+            })
+
+
 
 
 
 
             // esta ruta está comentada porque es el modelo de una ruta solo accesable con login
-            
+
             // .when('/profile',{
             //     template:`<user-profile-component></user-profile-component>`,
             //     resolve: {

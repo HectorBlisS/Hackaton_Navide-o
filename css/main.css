@@ -1,11 +1,10 @@
 @import "_nav.css";
 @import "_landing.css";
 @import "_profile.css";
+@import "_bases.css";
 
 html, body, section, h1{
   margin: 0;
   padding: 0;
   color: black;
 }
-
-
