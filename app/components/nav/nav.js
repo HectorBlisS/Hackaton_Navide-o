@@ -7,7 +7,7 @@
 		controller:navController
 	}
 
-	function navController($scope,$http,$firebaseAuth){
+	function navController($scope,$http,$firebaseAuth,$location){
 		
 	//Inicio de sesión BLISS
         $scope.authObj = $firebaseAuth();

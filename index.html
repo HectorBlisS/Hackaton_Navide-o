@@ -7,6 +7,9 @@
     <title>Hackaton FixterGeek</title>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- fa fa-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- main-->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -15,12 +18,18 @@
 <body>
     <nav-component></nav-component>
     <br>
+    <div id="particles-js"></div>
     <section ng-view></section>
+
+    
 
 
 <!-- Jquery -->
 <script src="/bower_components/jquery/dist/jquery.js"></script>
 <script src="/bower_components/jquery.easing/js/jquery.easing.js"></script>
+<!-- particulas-->
+
+<script src="/js/particles.min.js"></script>
 <!-- Bootstrap -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <!-- Angular js -->
@@ -67,5 +76,14 @@
 <!-- <script src="bower_components/angular-animate/angular-animate.js"></script> -->
 <script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
 <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+
+
+<script>
+    //Particulas
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', '/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+</script>
 </body>
 </html>

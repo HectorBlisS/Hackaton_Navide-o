@@ -1,37 +1,33 @@
 <section class="section">
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
-</ul>
-<article>
+
+<article class="article centrado">
+
+
     <h2 style="text-align:center">
-        Our hackathons and global community maximize the fun you can have while changing the world, together with 97,000 others. Compete to build, test and launch your amazing idea to the world and get kudos, cash and maybe even a crown.
+        "Un Hackatón solo para pasarla bien"
     </h2>
+    <h4>
+    	Ven y diviertete con nosotros el 17 de Diciembre en Pachuca. <br> <br>
+		Arma tu equipo de 5 personas o encuentra tu equipo aquí mismo.
+	</h4>
+	<h5>
+		Entra con Facebook
+	</h5>	
+	<button ng-click="logIn()" ng-hide="user" class="btn btn-primary">
+		<i class="fa fa-facebook-square" aria-hidden="true"></i>
+		Facebook
+	</button>
+	<button ng-click="logOut()" ng-show="user" class="arriba btn btn-primary">
+		<i class="fa fa-facebook-square" aria-hidden="true"></i>
+		Cerrar Sesión
+	</button>
+
+
 
 </article>
+<div class="footer">
+</div>
 </section>
 
+
     <!-- Google Maps -->
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCApLfTHnODeHoMg2KIbr2jrxhDl4dPLGg&callback=initMap">
-    </script>
-<script type="text/javascript">
-
-var map;
-function initMap() {
-  var myLatLng = {lat: 20.1342465, lng: -98.8016812};
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 16,
-    center: myLatLng
-  });
-
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'LoL'
-  });
-}
-
-    </script>
