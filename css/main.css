@@ -11,6 +11,9 @@ html, body, section, h1, div{
   font-family: 'Bree Serif', serif;
 
 }
+body{
+	min-height: 100vh;
+}
 #particles-js{
 	position: absolute;
 	top: 64px;
