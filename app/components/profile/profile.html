@@ -19,7 +19,7 @@
 <div class="card card-1 row">
 	<div ng-hide="perfil" class="noClan">
 		<div class="col-xs-8 col-xs-offset-1">
-			<input ng-model="clan.nombre" placeholder="Nombra a tu Clan" class="form-control" type="text" required>
+			<input ng-model="clan.nombre" placeholder="Nombra a tu Equipo" class="form-control" type="text" required>
 			<span ng-show="existe" style="background:red;color:white;font-size:2rem">Este nombre de clan ya existe, escoge otro</span>
 		</div>
 		<input type="submit" value="Crear Clan" class="btn btn-success col-xs-2">
@@ -156,63 +156,11 @@
 </section>
 
 
-<div id="modal-overlay" class='modal-overlay fondo-negro'></div>
-    <div id="modal_pagar" class='modall'>
-      <div class='modal-content '>
-        <div class=''>
-            <i id="close" class="close material-icons">close</i>
-        </div>
-        <!-- <form class='form'  ng-show="!landing.mostrar" ng-submit="landing.enviar()"> -->
-          <div class="row" style="text-align:center" >
-<!--               <div class="form-group col-md-12">
-                <label for="Nombre">Nombre</label>
-                <input type="text" class="form-control" id="Nombre" placeholder="Nombre" ng-model="landing.name" required>
-              </div>
-              <div class="form-group col-md-12">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Correo" ng-model="landing.email" required>
-              </div> -->
-
-              <h2>
-                Información de pago
-              </h2>
-              <br>
-              <div style="padding:1%">
-				  Para completar el registro se debe realizar el pago de todos los integrantes
-				  del equipo con un costo total de $1,000 M.N. posteriormente se debe mandar el comprobante de depósito
-				  a los correos: contacto@fixter.org, admin@fixter.org o david@fixter.org.
-
-				  <p style="padding:2% 2%;">
-					    BANCO:
-						Inbursa <br>
-						TARJETA:
-						4658-2859-0144-4558 <br>
-						CUENTA:
-						50017925381 <br>
-						CLABE:
-						036290500179253813 <br>
-
-						Puedes depositar en Walmart, Oxxo, o Sanborns.
-				  </p>
 
 
-				  Al recibir tu comprobante activaremos a tu equipo y te esperamos en el torneo.
-			  </div>
-              
-          </div>
-         <!--  <div class='form-submit'>
-            <input class='btn btn_datos' type="submit" value='Enviar' />
-          </div> -->
-        <!-- </form> -->
+    <script>
+$(document).ready(function(){
+	$("#particles-js").css("z-index", "0");
+});
 
-        <div  id="succes" class="row" ng-show="landing.mostrar">
-            <div class="icon_succes">
-                <i class="fa fa-check-circle fa-5x" aria-hidden="true"></i>
-            </div>
-            <div class="Gracias col-md-12">
-                Gracias, lo antes posible nos comunicaremos contigo para contarte que sigue.
-            </div>
-        </div>
-        
-      </div>
-    </div>
+</script>
