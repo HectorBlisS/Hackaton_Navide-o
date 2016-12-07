@@ -22,7 +22,14 @@
 		    	tel: $scope.telefono,
 		    	text: $scope.texto
 		    });
+		    $scope.thanks = false;
+		    $scope.thanks = !$scope.thanks;
+		    $scope.sponsor = false;
+		    $scope.sponsor = !$scope.sponsor;
 		  };
+
+		 $scope.nombre = "";
+
 
 
 	

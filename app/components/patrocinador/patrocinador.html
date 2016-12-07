@@ -8,12 +8,18 @@
 
 			<!--Nos encantaría que seas parte de este gran evento patrocinando de cualquier forma, ya sea de manera ecónómica o en premios-->
 
-			Estarás en todos los medios publicitarios que usaremos en función del paquete de patrocinador que desees elegir </h4>
+			 Estarás en todos los medios publicitarios que usaremos, en función del paquete de patrocinador que desees elegir </h4>
 
 			<hr>
 
-			
-			<div>
+			<div ng-show="thanks">
+				
+				<h3>Gracias {{nombre}}</h3>
+				<h5>Nos pondremos en contacto</h5>
+				<span>Será un evento Genial!</span>
+			</div>
+
+			<div ng-hide="sponsor">
 				<p style='	margin-top:10px; font-family: 'Raleway', sans-serif;'>
 				¿Te animas? Escríbenos</p>
 				
@@ -83,11 +89,7 @@
 				</form>
 			</div>
 
-			<div>
-				<h3>Gracias {{$scope.nombre}}</h3>
-				<h5>Nos pondremos en contacto</h5>
-				<span>Será un evento Genial!</span>
-			</div>
+			
 
 			
 		</article>
