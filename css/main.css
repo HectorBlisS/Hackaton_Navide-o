@@ -8,12 +8,13 @@
 @import "_footer.css";
 @import "santa.css";
 
+@import url('https://fonts.googleapis.com/css?family=Megrim');
 
 html, body, section, h1, div{
   margin: 0;
   padding: 0;
   color: black;
-  font-family: 'Bree Serif', serif;
+  font-family: 'Megrim', cursive;
   min-height: 100vh;
 
 }
