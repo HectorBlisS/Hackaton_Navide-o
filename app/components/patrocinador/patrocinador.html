@@ -8,78 +8,88 @@
 
 			<!--Nos encantaría que seas parte de este gran evento patrocinando de cualquier forma, ya sea de manera ecónómica o en premios-->
 
-			Estarás en todos los medios publicitarios que usaremos en función del paquete de patrocinador que desees elegir </h4>
+			 Estarás en todos los medios publicitarios que usaremos, en función del paquete de patrocinador que desees elegir </h4>
 
 			<hr>
 
+			<div ng-show="thanks">
+				
+				<h3>Gracias {{nombre}}</h3>
+				<h5>Nos pondremos en contacto</h5>
+				<span>Será un evento Genial!</span>
+			</div>
+
+			<div ng-hide="sponsor">
+				<p style='	margin-top:10px; font-family: 'Raleway', sans-serif;'>
+				¿Te animas? Escríbenos</p>
+				
+				<form ng-submit="addMessage()" class="form-horizontal" validate>
+				 <div class="row">
+				 	<div class="col-md-6">
+				 		<!--nombre-->
+					  <div class="form-group">
+					    <label for="inputPassword3" class="col-sm-2 control-label">Nombre*</label>
+					    <div class="col-sm-10">
+					      <input required ng-model="nombre" type="text" class="form-control" id="inputPassword3" placeholder="Nombre del patrocinador">
+
+					    </div>
+					  </div>
+				 	</div>
+				 	<div class="col-md-6">
+				 		<!--nombre-->
+					  <div class="form-group">
+					    <label for="inputPassword3" class="col-sm-2 control-label">Empresa*</label>
+					    <div class="col-sm-10">
+
+					      <input required ng-model="empresa" type="text" class="form-control" id="inputPassword3" placeholder="Nombre de la Empresa">
+
+					    </div>
+					  </div>
+				 	</div>
+				 </div>
+
+				 <div class="row">
+				 	<div class="col-md-6">
+				 		<!--Email-->
+					   <div class="form-group">
+					    <label for="inputEmail3" class="col-sm-2 control-label">Correo*</label>
+					    <div class="col-sm-10">
+
+					      <input required ng-model="correo" type="email" class="form-control" id="inputEmail3" placeholder="Email">
+
+					    </div>
+					  </div>
+				 	</div>
+				 	<div class="col-md-6">
+				 			<!--Número-->
+					  <div class="form-group">
+					    <label for="inputP" class="col-sm-2 control-label">Número*</label>
+					    <div class="col-sm-10">
+
+					      <input required ng-model="telefono" type="number" class="form-control" id="inputP" placeholder="Número de contacto">
+
+					    </div>
+					  </div>
+				 	</div>
+				 </div>
+				  
+				  <div class="form-group">
+				    <label for="inputsaa" class="col-sm-1 control-label">Mensaje*</label>
+				    <div class="col-sm-10">
+
+				       <textarea required ng-model="texto" class="form-control" rows="3" placeholder="Cúentanos"></textarea>
+
+				    </div>
+				  </div>
+				  	<div class="form-group">
+					    <div class="col-sm-10">
+					      <input type="submit" class="btn btn-default">
+					    </div>
+					  </div>
+				</form>
+			</div>
+
 			
-			<p style='	margin-top:10px; font-family: 'Raleway', sans-serif;'>
-			¿Te animas? Escríbenos</p>
-			
-			<form ng-submit="addMessage()" class="form-horizontal" validate>
-			 <div class="row">
-			 	<div class="col-md-6">
-			 		<!--nombre-->
-				  <div class="form-group">
-				    <label for="inputPassword3" class="col-sm-2 control-label">Nombre*</label>
-				    <div class="col-sm-10">
-				      <input required ng-model="nombre" type="text" class="form-control" id="inputPassword3" placeholder="Nombre del patrocinador">
-
-				    </div>
-				  </div>
-			 	</div>
-			 	<div class="col-md-6">
-			 		<!--nombre-->
-				  <div class="form-group">
-				    <label for="inputPassword3" class="col-sm-2 control-label">Empresa*</label>
-				    <div class="col-sm-10">
-
-				      <input required ng-model="empresa" type="text" class="form-control" id="inputPassword3" placeholder="Nombre de la Empresa">
-
-				    </div>
-				  </div>
-			 	</div>
-			 </div>
-
-			 <div class="row">
-			 	<div class="col-md-6">
-			 		<!--Email-->
-				   <div class="form-group">
-				    <label for="inputEmail3" class="col-sm-2 control-label">Correo*</label>
-				    <div class="col-sm-10">
-
-				      <input required ng-model="correo" type="email" class="form-control" id="inputEmail3" placeholder="Email">
-
-				    </div>
-				  </div>
-			 	</div>
-			 	<div class="col-md-6">
-			 			<!--Número-->
-				  <div class="form-group">
-				    <label for="inputP" class="col-sm-2 control-label">Número*</label>
-				    <div class="col-sm-10">
-
-				      <input required ng-model="telefono" type="number" class="form-control" id="inputP" placeholder="Número de contacto">
-
-				    </div>
-				  </div>
-			 	</div>
-			 </div>
-			  
-			  <div class="form-group">
-			    <label for="inputsaa" class="col-sm-1 control-label">Mensaje*</label>
-			    <div class="col-sm-10">
-
-			       <textarea required ng-model="texto" class="form-control" rows="3" placeholder="Cúentanos"></textarea>
-
-			    </div>
-			  </div>
-		  	<div class="form-group">
-			    <div class="col-sm-10">
-			      <input type="submit" class="btn btn-default">
-			    </div>
-			  </div>
-			</form>
 
 			
 		</article>
