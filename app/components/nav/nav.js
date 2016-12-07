@@ -7,8 +7,10 @@
 		controller:navController
 	}
 
-	function navController($scope,$http,$firebaseAuth,$location){
-		
+	function navController($scope,$http,$firebaseAuth,$location,$firebaseArray){
+		//referencia ala base
+    var ref = firebase.database().ref('usuarios');
+
 	//Inicio de sesión BLISS
         $scope.authObj = $firebaseAuth();
         $scope.authObj.$onAuthStateChanged(function(firebaseUser) {
@@ -31,7 +33,6 @@
           $scope.authObj.$signInWithPopup("facebook")
           .then(function(result) {
             $scope.user = result.user;
-            $location.path('/profile');
             // console.log($scope.user)
             // window.location.reload();
 
@@ -45,6 +46,7 @@
             })
             .then(function(){
               console.log('segun si');
+              $location.path('/profile');
             });
         
         });
