@@ -7,7 +7,7 @@
 		controller:profileController
 	}
 
-	function profileController($scope,$http,$firebaseAuth,$firebaseArray,$firebaseObject){
+	function profileController($timeout,$scope,$http,$firebaseAuth,$firebaseArray,$firebaseObject){
 		// Variables
 		//Referencia
         var ref = firebase.database().ref('clanes');
@@ -70,7 +70,7 @@
 				var usr = usuarios.$getRecord($scope.todoClan.miembros[1].uid);
 				usr.clan = null;
 				usuarios.$save(usr);
-				$scope.todoClan.miembros[miembro] = []
+				$scope.todoClan.miembros[1] = []
 				clanes.$save($scope.todoClan);
 
 			}
@@ -79,23 +79,24 @@
 				var usr = usuarios.$getRecord($scope.todoClan.miembros[2].uid);
 				usr.clan = null;
 				usuarios.$save(usr);
-				$scope.todoClan.miembros[miembro] = []
+				$scope.todoClan.miembros[2] = []
 				clanes.$save($scope.todoClan);
 			}
 			else if(miembro === 4){
 				$scope.clan.miembro4 = {}
-				$scope.todoClan.miembros[miembro] = []
+				$scope.todoClan.miembros[3] = []
 				clanes.$save($scope.todoClan);
 			}
 			else if(miembro === 5){
 				$scope.clan.miembro5 = {}
-				$scope.todoClan.miembros[miembro] = []
+				$scope.todoClan.miembros[4] = []
 				clanes.$save($scope.todoClan);
 			}
 		}
 
 
 		$scope.invitar = function(miembro){
+			$scope.invitacion = true;
 			console.log(miembro);
 			console.log($scope.perfil.clan);
 			var invitacion ={
@@ -104,6 +105,7 @@
 					clan:$scope.perfil.clan
 			}
 			invitaciones.$add(invitacion);
+			$timeout(function(){ $scope.invitacion = false; console.log('apagado') }, 5000);
 		}
 
 		$scope.hayInvitacion = function(){
@@ -231,7 +233,7 @@ if(clan.miembros.length < 5 && $scope.yasta === false){
 
 
 
-
+     
 
 	} //controller
 
