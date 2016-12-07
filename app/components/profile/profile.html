@@ -64,8 +64,8 @@
 
 			
 		</div>
-		<div id="botones" ng-show="clan.miembro2.displayName">
-		<button ng-click="clearMiembro(2)" class="btn btn-danger col-xs-1">X</button>
+		<div id="botones" ng-show="clan.miembro3.displayName">
+		<button ng-click="clearMiembro(3)" class="btn btn-danger col-xs-1">X</button>
 		<input class="btn btn-success col-xs-2" type="submit" value="Enviar invitación">
 		</div>
 	</form>
@@ -83,8 +83,8 @@
 
 			
 		</div>
-		<div id="botones" ng-show="clan.miembro2.displayName">
-		<button ng-click="clearMiembro(2)" class="btn btn-danger col-xs-1">X</button>
+		<div id="botones" ng-show="clan.miembro4.displayName">
+		<button ng-click="clearMiembro(4)" class="btn btn-danger col-xs-1">X</button>
 		<input class="btn btn-success col-xs-2" type="submit" value="Enviar invitación">
 		</div>
 	</form>
@@ -102,8 +102,8 @@
 
 			
 		</div>
-		<div id="botones" ng-show="clan.miembro2.displayName">
-		<button ng-click="clearMiembro(2)" class="btn btn-danger col-xs-1">X</button>
+		<div id="botones" ng-show="clan.miembro5.displayName">
+		<button ng-click="clearMiembro(5)" class="btn btn-danger col-xs-1">X</button>
 		<input class="btn btn-success col-xs-2" type="submit" value="Enviar invitación">
 		</div>
 	</form>
@@ -129,10 +129,15 @@
 
 <!-- Invitaciones -->
 <div ng-show="inv.invitado_displayName === user.displayName" ng-repeat="inv in i" class="card card-1 row">
-	<h5>Tienes una invitacion para unirte al Clan:</h5>
+	<h5>Tienes una invitacion para unirte al Equipo:</h5>
 	<h4>{{inv.clan}}</h4>
 	<button ng-click="acepto(inv)" class="btn btn-success">Aceptar</button>
 	<button ng-click="noAcepto(inv)" class="btn btn-danger">Rechazar</button>
+</div>
+
+<!-- Clan lleno -->
+<div ng-show="lleno" class="card card-1 row">
+	<h5>{{mensaje_de_mierda}} - {{lleno.clan}}</h5>
 </div>
 
 </div> <!-- 8 columnas -->

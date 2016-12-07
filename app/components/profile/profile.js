@@ -33,7 +33,7 @@
         		$scope.perfil = p.$getRecord($scope.user.uid);
         		if (!$scope.perfil.clan){
         			$scope.perfil = null; 
-        		}
+        		} else{
 
         		// Guardamos los miembros del clan
         		$scope.todoClan = clanes.$getRecord($scope.perfil.clan);
@@ -41,7 +41,7 @@
         		$scope.clan.miembro3 = $scope.todoClan.miembros[2];
         		$scope.clan.miembro4 = $scope.todoClan.miembros[3];
         		$scope.clan.miembro5 = $scope.todoClan.miembros[4];
-
+        			}
 
         	});
         	//Buscamos invitaciones
@@ -70,7 +70,7 @@
 				var usr = usuarios.$getRecord($scope.todoClan.miembros[1].uid);
 				usr.clan = null;
 				usuarios.$save(usr);
-				$scope.todoClan.miembros[1] = []
+				$scope.todoClan.miembros[miembro] = []
 				clanes.$save($scope.todoClan);
 
 			}
@@ -79,17 +79,17 @@
 				var usr = usuarios.$getRecord($scope.todoClan.miembros[2].uid);
 				usr.clan = null;
 				usuarios.$save(usr);
-				$scope.todoClan.miembros[2] = []
+				$scope.todoClan.miembros[miembro] = []
 				clanes.$save($scope.todoClan);
 			}
 			else if(miembro === 4){
 				$scope.clan.miembro4 = {}
-				$scope.todoClan.miembros[3] = []
+				$scope.todoClan.miembros[miembro] = []
 				clanes.$save($scope.todoClan);
 			}
 			else if(miembro === 5){
 				$scope.clan.miembro5 = {}
-				$scope.todoClan.miembros[4] = []
+				$scope.todoClan.miembros[miembro] = []
 				clanes.$save($scope.todoClan);
 			}
 		}
@@ -134,6 +134,27 @@
 				// 	console.log('Ya existe');
 				// 	invitaciones.$remove(inv);
 				// }else{
+
+// aqui devo validar i ya existe el usuario en clan
+clan.miembros.forEach(function(elemento, index){
+	console.log('Entre al for');
+	console.log("miembro:",elemento);
+	console.log("logueado:",$scope.user.displayName);
+	if(elemento.displayName === $scope.user.displayName){
+		$scope.yasta = true;
+		console.log('Ya eres parte cerdo!');
+	}else{
+		$scope.yasta = false;
+	}
+});
+
+
+
+// no agregar si supera los 5 miembros
+if(clan.miembros.length < 5 && $scope.yasta === false){
+
+
+
 					clan.miembros.push({
 						uid:$scope.user.uid,
 						displayName:$scope.user.displayName,
@@ -146,8 +167,19 @@
 	        		elUsuario.clan = clan.nombreClan;
 	        		elUsuario.capitan = false;
 	        		usuarios.$save(elUsuario);
-	        		window.location.reload();
+	        		//window.location.reload();
+}else {
 
+	console.log("numero de miembros: ",clan.miembros.length);
+	$scope.lleno ={};
+	$scope.lleno.clan = inv.clan;
+	invitaciones.$remove(inv);
+	if($scope.yasta === true){
+		$scope.mensaje_de_mierda = "Ya eres parte del equipo pendejo!";
+	}else{
+		$scope.mensaje_de_mierda = "El equipo ya está lleno";
+	}
+}
 				// }
 				
 				// clanes.$save(clan);
@@ -157,7 +189,7 @@
 			// invitaciones.$remove(inv);
 
 
-		}
+		} // acepto
 
 
 
