@@ -20,7 +20,7 @@
 		¡ENTRADA LIBRE!
 	</h2>
 
-    
+    <hr>
     <div class="row">
 
     	<h3>Equipos Registrados al momento</h3>
@@ -29,30 +29,34 @@
                 <div class="thumbnail">
                     <h3>{{clan.$id}}</h3>
                     <hr>
-                    <img src="{{clan.miembros[0].photoURL}}" >
+
+                    <img data-toggle="tooltip" data-placement="top" title="{{clan.miembros[0].displayName}}"  src="{{clan.miembros[0].photoURL}}" >
+
                     <br>
-                    <div class="row">
-                    	<div class="col-xs-6 col-md-3">
-					    
-					      <img src="{{clan.miembros[1].photoURL}}" alt="">
-					    
-					  	</div>
-					  	<div class="col-xs-6 col-md-3">
-					    
-					      <img src="{{clan.miembros[2].photoURL}}" alt="">
-					    
-					  	</div>
-					  	<div class="col-xs-6 col-md-3">
-					    
-					      <img src="{{clan.miembros[3].photoURL}}" alt="">
-					    
-					  	</div>
-					  	<div class="col-xs-6 col-md-3">
-					    
-					      <img src="{{clan.miembros[4].photoURL}}" alt="">
-					    
-					  	</div>
-                    </div>                  
+                    <div class="container-fluid">
+                        <div class="row">
+                        <div class="col-xs-6 col-md-3">
+                        
+                          <img data-toggle="tooltip" data-placement="top" title="{{clan.miembros[1].displayName}}"  src="{{clan.miembros[1].photoURL}}" alt="">
+                        
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                        
+                          <img data-toggle="tooltip" data-placement="top" title="{{clan.miembros[2].displayName}}"  src="{{clan.miembros[2].photoURL}}" alt="">
+                        
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                        
+                          <img data-toggle="tooltip" data-placement="top" title="{{clan.miembros[3].displayName}}"  src="{{clan.miembros[3].photoURL}}" alt="">
+                        
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                        
+                          <img data-toggle="tooltip" data-placement="top" title="{{clan.miembros[4].displayName}}"  src="{{clan.miembros[4].photoURL}}" alt="">
+                        
+                        </div>
+                    </div>  
+                    </div>                
                 </div>
             </div>
     	</div>
