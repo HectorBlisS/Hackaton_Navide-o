@@ -1,10 +1,42 @@
     <header>
         <nav class="elnav">
-           
-           <div class="pull-left">
-            <a href="#/">
+
+            <div ng-click="ham()" class="hambu">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+
+            <a href="#/" class="">
                 <img width="100" src="/images/geeki_navida.png">
             </a>
+
+            <span ng-show="user" class="pull-right">
+                        <a ng-click="menusito()" href>
+                        <div class="papa">
+                        <img id="papa" width="100" style="border-radius:50%" src="{{user.photoURL}}">
+                        </a>
+                            <ul class="mini-menu" style="display:none">
+                                <li>
+                                    <a href="#/profile">
+                                    perfil
+                                    </a>
+                                </li>
+                                <li><a href="#/">
+                                    Pollollón
+                                    </a></li>
+                                <li ng-click="logOut()">
+                                    <a href>
+                                    Cerrar sesión
+                                    </a>
+                                </li>
+                            </ul>
+                            </div>
+                        
+                        </span>
+           
+           <div id="botons" class="pull-left">
+            
+
+
                 <span>
                     <a class="btn btn-info" href="#/patrocinador">
                     ¿Quieres Patrocinar?
@@ -23,31 +55,13 @@
                 <span ng-hide="user">
                     <button ng-click="logIn()" class="btn btn-danger">Iniciar Sesión</button>
                 </span>
+
+
             </div>
 
                 
                 
-                        <span ng-show="user" class="pull-right">
-                        <a ng-click="menusito()" href>
-                        <div class="papa">
-                        <img id="papa" width="100" style="border-radius:50%" src="{{user.photoURL}}">
-                        </a>
-                            <ul class="mini-menu" style="display:none">
-                                <li>
-                                    <a href="#/profile">
-                                    perfil
-                                    </a>
-                                </li>
-                                <li>Pollollon</li>
-                                <li ng-click="logOut()">
-                                    <a href>
-                                    Cerrar sesión
-                                    </a>
-                                </li>
-                            </ul>
-                            </div>
                         
-                        </span>
                         
                 
                 
