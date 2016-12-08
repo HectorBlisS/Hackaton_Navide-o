@@ -7,7 +7,7 @@
 		controller:landingController
 	}
 
-	function landingController($scope,$http,$firebaseAuth,$firebaseArray,$location){
+	function landingController($scope,$http,$firebaseAuth,$firebaseArray,$location, $firebaseObject){
 		//particulas estorbosas
     
 
@@ -66,6 +66,21 @@
             $scope.user = null;
           });
         }
+
+        var refclan = firebase.database().ref('clanes');
+        var clanes = {};
+        $scope.clanes = $firebaseArray(refclan);
+        $scope.clanes.$loaded()
+        .then(function(lista){
+          console.log(lista);
+          clanes = lista;
+        });
+        
+
+
+
+
+
 
 
 
