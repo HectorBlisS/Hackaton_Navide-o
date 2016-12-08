@@ -20,41 +20,41 @@
 		¡ENTRADA LIBRE!
 	</h2>
 
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
+    
+    <div class="row">
+    	<div ng-repeat="clan in clanes">
+       		<div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <h3>Thumbnail label</h3>
-                    <img src="..." alt="...">
-                    <div class="caption">
-                        <p>texto</p>
-                        <div class="row">
-                            <div class="col-xs-6 col-md-3">
-                                <a href="#" class="thumbnail">
-                                    <img src="..." alt="...">
-                                </a>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6 col-md-3">
-                                    <a href="#" class="thumbnail">
-                                        <img src="..." alt="...">
-                                    </a>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-6 col-md-3">
-                                        <a href="#" class="thumbnail">
-                                            <img src="..." alt="...">
-                                        </a>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-6 col-md-3">
-                                            <a href="#" class="thumbnail">
-                                                <img src="..." alt="...">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <h3>{{clan.$id}}</h3>
+                    <img src="{{clan.miembros[0].photoURL}}" >
+                    <br>
+                    <div class="row">
+                    	<div class="col-xs-6 col-md-3">
+					    
+					      <img src="{{clan.miembros[1].photoURL}}" alt="">
+					    
+					  	</div>
+					  	<div class="col-xs-6 col-md-3">
+					    
+					      <img src="{{clan.miembros[2].photoURL}}" alt="">
+					    
+					  	</div>
+					  	<div class="col-xs-6 col-md-3">
+					    
+					      <img src="{{clan.miembros[3].photoURL}}" alt="">
+					    
+					  	</div>
+					  	<div class="col-xs-6 col-md-3">
+					    
+					      <img src="{{clan.miembros[4].photoURL}}" alt="">
+					    
+					  	</div>
+                    </div>                  
+                </div>
+            </div>
+    	</div>
+            
+    </div>
 
     </article>
 
