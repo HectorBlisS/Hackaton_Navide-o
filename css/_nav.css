@@ -43,4 +43,56 @@
 	z-index: 9999;
 
 }
+.hambu{
+	display: none;
+	position: absolute;
+	left: 0;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	font-size: 4rem;
+}
+#botons{
+		display: block;
+		}
+@media (max-width: 590px){
+	#botons{
+		display: none;
+		margin: 0;
+		padding: 0;
+		margin-top: 20px;
+
+
+	}
+	#botons span{
+		margin: 0;
+		padding:0;
+
+
+	}
+	#botons span a, button{
+		width: 100%;
+		margin-top: 5px;
+		height: 40px;
+
+
+	}
+	.elnav{
+		padding-top:0;
+  		padding-left:0;
+		text-align: center;
+		margin-bottom: 150px;
+		
+	}
+	.elnav span{
+		display: block;
+	}
+	.elnav a{
+		text-align: center;
+		margin: 0 auto;
+	}
+	.hambu{
+		display: block;
+	}
+}
 

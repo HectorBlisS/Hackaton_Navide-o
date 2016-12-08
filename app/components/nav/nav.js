@@ -57,6 +57,18 @@
           $.apply;
         }
 
+        $scope.ham = function(){
+          $('#botons').removeClass('pull-left');
+          $('#botons').slideToggle();
+          $.apply;
+        }
+
+        $('#botons').on('click',function(){
+          $('#botons').slideToggle();
+        });
+
+
+
 	} //controller
 
 	angular
