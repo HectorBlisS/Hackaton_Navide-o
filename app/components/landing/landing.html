@@ -21,9 +21,10 @@
 	</h2>
 
     <hr>
+    <h3>Equipos Registrados al momento</h3>
     <div class="row">
 
-    	<h3>Equipos Registrados al momento</h3>
+    	
     	<div ng-repeat="clan in clanes">
        		<div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
@@ -35,37 +36,35 @@
                     <br>
                     <div class="container-fluid">
                         <div class="row">
-                        <div class="col-xs-6 col-md-3">
-                        
-                          <img ng-show="clan.miembros[1].photoURL" data-toggle="tooltip" data-placement="top" title="{{clan.miembros[1].displayName}}"  src="{{clan.miembros[1].photoURL}}" alt="" default="/images/geeki_navidad.png">
+                            <div class="col-xs-6 col-md-3">
+                            
+                              <img ng-show="clan.miembros[1].photoURL" data-toggle="tooltip" data-placement="top" title="{{clan.miembros[1].displayName}}"  src="{{clan.miembros[1].photoURL}}" alt="" >
 
-                          <img ng-hide="clan.miembros[1].photoURL" src="/images/geeki_navida.png">
+                              <img ng-hide="clan.miembros[1].photoURL" src="/images/geekis.png">
+                            
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                            
+                              <img ng-show="clan.miembros[2].photoURL" data-toggle="tooltip" data-placement="top" title="{{clan.miembros[2].displayName}}"  src="{{clan.miembros[2].photoURL}}" alt="" >
 
-                          
-                        
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                        
-                          <img ng-show="clan.miembros[2].photoURL" data-toggle="tooltip" data-placement="top" title="{{clan.miembros[2].displayName}}"  src="{{clan.miembros[2].photoURL}}" alt="" default="/images/geeki_navidad.png">
+                              <img ng-hide="clan.miembros[2].photoURL" src="/images/geekis.png">
+                            
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                            
+                              <img ng-show="clan.miembros[3].photoURL" data-toggle="tooltip" data-placement="top" title="{{clan.miembros[3].displayName}}"  src="{{clan.miembros[3].photoURL}}" alt="" >
 
-                          <img ng-hide="clan.miembros[2].photoURL" src="/images/geeki_navida.png">
-                        
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                        
-                          <img ng-show="clan.miembros[3].photoURL" data-toggle="tooltip" data-placement="top" title="{{clan.miembros[3].displayName}}"  src="{{clan.miembros[3].photoURL}}" alt="" default="/images/geeki_navidad.png">
+                              <img ng-hide="clan.miembros[3].photoURL" src="/images/geekis.png">
+                            
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                            
+                              <img ng-show="clan.miembros[4].photoURL" data-toggle="tooltip" data-placement="top" title="{{clan.miembros[4].displayName}}"  src="{{clan.miembros[4].photoURL}}" alt="" >
 
-                          <img ng-hide="clan.miembros[3].photoURL" src="/images/geeki_navida.png">
-                        
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                        
-                          <img ng-show="clan.miembros[4].photoURL" data-toggle="tooltip" data-placement="top" title="{{clan.miembros[4].displayName}}"  src="{{clan.miembros[4].photoURL}}" alt="" default="/images/geeki_navidad.png">
-
-                          <img ng-hide="clan.miembros[4].photoURL" src="/images/geeki_navida.png">
-                        
-                        </div>
-                    </div>  
+                              <img ng-hide="clan.miembros[4].photoURL" src="/images/geekis.png">
+                            
+                            </div>
+                        </div>  
                     </div>                
                 </div>
             </div>
