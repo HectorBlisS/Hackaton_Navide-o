@@ -16,9 +16,11 @@ html, body, section, h1, div{
   color: black;
   /*font-family: 'Megrim', cursive;*/
   font-family: 'Raleway', sans-serif;
+  
 }
 body{
-	min-height: 100vh;
+	display: block;
+	position: relative;
 }
 
 #particles-js{
@@ -33,6 +35,4 @@ body{
 	}
 }
 
-.body{
-	position: relative;
-}
+
