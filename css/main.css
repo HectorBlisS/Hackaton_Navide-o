@@ -14,8 +14,8 @@ html, body, section, h1, div{
   margin: 0;
   padding: 0;
   color: black;
-  font-family: 'Megrim', cursive;
-
+  /*font-family: 'Megrim', cursive;*/
+  font-family: 'Raleway', sans-serif;
 }
 body{
 	min-height: 100vh;
