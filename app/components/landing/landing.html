@@ -37,22 +37,32 @@
                         <div class="row">
                         <div class="col-xs-6 col-md-3">
                         
-                          <img data-toggle="tooltip" data-placement="top" title="{{clan.miembros[1].displayName}}"  src="{{clan.miembros[1].photoURL}}" alt="">
+                          <img ng-show="clan.miembros[1].photoURL" data-toggle="tooltip" data-placement="top" title="{{clan.miembros[1].displayName}}"  src="{{clan.miembros[1].photoURL}}" alt="" default="/images/geeki_navidad.png">
+
+                          <img ng-hide="clan.miembros[1].photoURL" src="/images/geeki_navida.png">
+
+                          
                         
                         </div>
                         <div class="col-xs-6 col-md-3">
                         
-                          <img data-toggle="tooltip" data-placement="top" title="{{clan.miembros[2].displayName}}"  src="{{clan.miembros[2].photoURL}}" alt="">
+                          <img ng-show="clan.miembros[2].photoURL" data-toggle="tooltip" data-placement="top" title="{{clan.miembros[2].displayName}}"  src="{{clan.miembros[2].photoURL}}" alt="" default="/images/geeki_navidad.png">
+
+                          <img ng-hide="clan.miembros[2].photoURL" src="/images/geeki_navida.png">
                         
                         </div>
                         <div class="col-xs-6 col-md-3">
                         
-                          <img data-toggle="tooltip" data-placement="top" title="{{clan.miembros[3].displayName}}"  src="{{clan.miembros[3].photoURL}}" alt="">
+                          <img ng-show="clan.miembros[3].photoURL" data-toggle="tooltip" data-placement="top" title="{{clan.miembros[3].displayName}}"  src="{{clan.miembros[3].photoURL}}" alt="" default="/images/geeki_navidad.png">
+
+                          <img ng-hide="clan.miembros[3].photoURL" src="/images/geeki_navida.png">
                         
                         </div>
                         <div class="col-xs-6 col-md-3">
                         
-                          <img data-toggle="tooltip" data-placement="top" title="{{clan.miembros[4].displayName}}"  src="{{clan.miembros[4].photoURL}}" alt="">
+                          <img ng-show="clan.miembros[4].photoURL" data-toggle="tooltip" data-placement="top" title="{{clan.miembros[4].displayName}}"  src="{{clan.miembros[4].photoURL}}" alt="" default="/images/geeki_navidad.png">
+
+                          <img ng-hide="clan.miembros[4].photoURL" src="/images/geeki_navida.png">
                         
                         </div>
                     </div>  
