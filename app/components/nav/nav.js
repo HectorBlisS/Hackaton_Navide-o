@@ -63,9 +63,9 @@
           $.apply;
         }
 
-        $('#botons').on('click',function(){
-          $('#botons').slideToggle();
-        });
+        // $('#botons').on('click',function(){
+        //   $('#botons').slideToggle();
+        // });
 
 
 
