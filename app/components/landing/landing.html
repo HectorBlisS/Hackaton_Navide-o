@@ -22,10 +22,13 @@
 
     
     <div class="row">
+
+    	<h3>Equipos Registrados al momento</h3>
     	<div ng-repeat="clan in clanes">
        		<div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <h3>{{clan.$id}}</h3>
+                    <hr>
                     <img src="{{clan.miembros[0].photoURL}}" >
                     <br>
                     <div class="row">
